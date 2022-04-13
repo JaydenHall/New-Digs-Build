@@ -14,6 +14,26 @@ body, html {
   line-height: 1.8;
 }
 
+h3 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 20px;
+}
+
+.project-bar {
+  font-size: 40px;
+}
+
+.section-title {
+  font-size: 55px;
+}
+
+.project-text {
+  font-size: 25px;
+}
+
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
   background-attachment: fixed;
@@ -153,7 +173,7 @@ ngb-carousel .picsum-img-wrapper>img {
   <p class="w3-center"><em>I love building</em></p>
   <p>This is the website for new digs build. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit.</p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <!-- <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br> -->
@@ -163,8 +183,7 @@ ngb-carousel .picsum-img-wrapper>img {
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
       <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit.</p>
     </div>
   </div>
   <p class="w3-large w3-center w3-padding-16">What we do:</p>
@@ -196,15 +215,17 @@ ngb-carousel .picsum-img-wrapper>img {
     Happy Clients
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    Meetings
+    <!-- removed  w3-xlarge-->
+    <span class="project-bar">150+</span><br>
+    <p class="project-text">Meetings</p>
   </div>
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+        <!-- have removed the class w3-xxlarge from span -->
+    <span class="section-title w3-text-white w3-wide">PORTFOLIO</span>
   </div>
 </div>
 
@@ -251,10 +272,10 @@ ngb-carousel .picsum-img-wrapper>img {
     <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
   </div> -->
 
-  <ngb-carousel class="carousel-container" *ngIf="images">
+  <ngb-carousel class="carousel-container">
     <ng-template ngbSlide>
         <div class="picsum-img-wrapper">
-        <img src="../assets/images/trailer.jpg" alt="Random first slide">
+        <img src="../assets/images/scaf.jpg" alt="Random first slide">
         </div>
         <div class="carousel-caption">
         <!-- <h3>First slide label</h3>
@@ -279,6 +300,24 @@ ngb-carousel .picsum-img-wrapper>img {
         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> -->
         </div>
     </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+      <img src="../assets/images/fence.jpg" alt="Random third slide">
+      </div>
+      <div class="carousel-caption">
+      <!-- <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> -->
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+      <img src="../assets/images/bath.jpg" alt="Random third slide">
+      </div>
+      <div class="carousel-caption">
+      <!-- <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> -->
+      </div>
+  </ng-template>
 </ngb-carousel>
 </div>
 
@@ -294,7 +333,8 @@ ngb-carousel .picsum-img-wrapper>img {
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+    <!-- have removed the class w3-xxlarge from span -->
+     <span class="section-title w3-text-white w3-wide">CONTACT</span>
   </div>
 </div>
 
